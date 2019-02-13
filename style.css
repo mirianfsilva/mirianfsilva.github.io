@@ -1,0 +1,14 @@
+body {
+	background-color: : #f1f1f1;
+}
+
+#content {
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 25px;
+	padding: 10%;
+}
+
+h3 {
+	font-size: 15px;
+}
