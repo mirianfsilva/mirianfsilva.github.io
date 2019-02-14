@@ -1,14 +1,35 @@
-body {
-	background-color: : #f1f1f1;
-}
-
 #content {
 	text-align: center;
 	font-family: 'Quicksand', sans-serif;
 	font-size: 25px;
-	padding: 10%;
+	padding: 15%;
+}
+
+body {
+	background-color: #B9A8BF;
+}
+
+html{
+	height: 100%;
+}
+
+h1 {
+	color: #211E1F;
 }
 
 h3 {
+	color: #211E1F;
 	font-size: 15px;
 }
+
+hr {
+	width: 200px;
+	border-top: 1px solid #B8C5DB;
+}
+
+/*
+<i class="fab fa-github"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-linkedin"></i>
+<i class="fas fa-laptop-code"></i>
+*/
