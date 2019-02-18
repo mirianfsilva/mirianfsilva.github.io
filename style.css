@@ -6,7 +6,17 @@
 }
 
 body {
-	background-color: #B9A8BF;
+	/*background-image: url(http://i68.tinypic.com/2u6ftif.png); */
+	background-image: url(http://i66.tinypic.com/2z7hh03.png);
+    background-color: #B9A8BF;
+	width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+  	background-size: cover; /* Resize the background image to cover the entire container */
+  	/*background-position: 50% 50%;*/
+  	position: absolute;
 }
 
 html{
@@ -14,11 +24,11 @@ html{
 }
 
 h1 {
-	color: #211E1F;
+	color: #B9A8BF;
 }
 
 h3 {
-	color: #211E1F;
+	color: #B9A8BF;
 	font-size: 15px;
 }
 
