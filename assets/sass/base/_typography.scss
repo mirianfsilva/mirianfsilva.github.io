@@ -9,14 +9,14 @@
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 14pt;
+		font-size: 10pt;
 		font-weight: _font(weight);
 		line-height: 2;
 		letter-spacing: _size(letter-spacing);
 		text-transform: uppercase;
 
 		@include breakpoint('<=xlarge') {
-			font-size: 11pt;
+			font-size: 10pt;
 		}
 
 		@include breakpoint('<=xsmall') {

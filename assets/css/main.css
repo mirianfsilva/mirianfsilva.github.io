@@ -1,5 +1,5 @@
 @import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap");
 
 /*
 	Identity by HTML5 UP
@@ -154,17 +154,18 @@
 
 	body, input, select, textarea {
 		color: #414f57;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 12pt;
+		font-family: 'Ubuntu Condensed', sans-serif;
+		font-size: 10pt;
 		font-weight: 200;
-		line-height: 2;
+		line-height: 1.5;
 		letter-spacing: 0.1em;
+		text-align: justify;
 	}
 
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 10pt;
 			}
 
 		}
