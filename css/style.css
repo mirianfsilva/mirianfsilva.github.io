@@ -671,7 +671,7 @@ footer {
     position: relative;
 }
 
-footer .col-md-4 .fa {
+footer .col-md-4 .fa .fab .far .fas {
   color: #ffffff;
   padding-right: 8px;
 }
