@@ -8,10 +8,11 @@ http://www.tooplate.com/view/2085-neuron
 
 body {
 		background: #ffffff;
-    font-family: 'Lora', serif;
+    font-family: 'Roboto Mono', monospace;
     font-style: normal;
 		font-weight: 300;
     overflow-x: hidden;
+    font-size: 13px;
 }
 
 
@@ -22,7 +23,6 @@ body {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Merriweather', serif;
   font-style: normal;
-  /* font-weight: bold; */
   letter-spacing: 0.5px;
 }
 
@@ -53,7 +53,7 @@ h4 {
 
 p {
     color: #777;
-    font-size: 15px;
+    font-size: 15Spx;
     font-weight: 300;
     line-height: 26px;
     letter-spacing: 0.2px;
@@ -74,10 +74,9 @@ p {
 }
 
 .card-body {
-  margin: 0 auto; /* Added */
-  margin-bottom: 10px; /* Added */
+  /* margin: 0 auto; */ /* Added */
+  /* margin-bottom: 15px; */ /* Added */
   text-align: left;
-  width: 60%;
   height:auto;
 }
 
@@ -87,7 +86,7 @@ img {
     width: 180px;
     height:auto;
     float: left;
-    border: 2px solid #ffffff;
+    border: 0.5px solid #ffffff;
     border-radius: 100px;
     margin-top: 40px;
     margin-right: 20px;
