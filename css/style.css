@@ -165,6 +165,8 @@ a:hover, a:active, a:focus {
   background-attachment: fixed !important;
   background-size: cover !important;
   overflow: hidden;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
 
 
