@@ -13,7 +13,6 @@
     <meta name="HandheldFriendly" content="true">
     <link rel="shortcut icon" href="./images/vader.ico" />
     <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"mirianfsilva",utcoffset:"-3"}))};sessionStorage.setItem("_swa","1");</script>
-
     <title>Mírian Silva</title>
     <!--
 
@@ -102,8 +101,9 @@ http://www.tooplate.com/view/2085-neuron
                     </li>
                     <!--                          <li><a href="https://resume.io/r/zq2xl2WG4" title="Resume" class="fa fa-user" target="_blank" rel="noopener noreferrer"></a></li> -->
                     <li>
-                        <a href="https://drive.google.com/file/d/1G7cZtd9KmRUYsb_y20W4i3FaU2VwW4Er/view?usp=sharing"
-                            title="Download Resume" class="fa fa-file" target="_blank" rel="noopener noreferrer"></a>
+                        <a href="resume.html"
+                            title="Resume" class="fa fa-file" target="_blank" rel="noopener noreferrer">
+                        </a>
                     </li>
                     <li>
                         <a href="https://www.coursera.org/instructor/mirianfsilva" title="Coursera Courses"
@@ -137,7 +137,37 @@ http://www.tooplate.com/view/2085-neuron
     <script src="js/jquery.parallax.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+        $(function() {
+            var gistPrefix = 'https://gist.github.com/';
 
+            var embedGists = function() {
+                $('a[href^="' + gistPrefix + '"]').each(function(index, anchor) {
+                    var href = $(anchor).attr('href');
+                    var gistId = href.substring(gistPrefix.length);
+                    var url = gistPrefix + gistId + '.json?callback=?';
+                    $.getJSON(url, function(gistData) {
+                        var cssUrl = gistPrefix + gistData.stylesheet;
+                        if ($('link[href="' + cssUrl + '"]').length == 0) {				
+                            $('head').append('<link rel="stylesheet" href="' + cssUrl + '" type="text/css" />');
+                        }
+                        $(anchor).replaceWith(gistData.div);
+                    });
+                });
+            };
+            
+            var infiniteScrollUpdated = function() {
+                embedGists();
+            };
+            
+            embedGists();
+            
+            // export behavior for infinite scroll
+            var myGitHub = {};
+            myGitHub = infiniteScrollUpdated;
+            window.myGitHub = myGitHub;
+        });
+    </script>
 </body>
 
 </html>
