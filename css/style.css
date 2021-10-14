@@ -6,8 +6,12 @@ http://www.tooplate.com/view/2085-neuron
 
 */
 
+html, body {
+  min-height: 100%;
+}
+
 body {
-		background: #ffffff;
+    background: #ffffff;
     font-family: 'Roboto Mono', monospace;
     font-style: normal;
 		font-weight: 300;
@@ -99,6 +103,10 @@ img {
 
 html{
   -webkit-font-smoothing: antialiased;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 a {
@@ -144,8 +152,8 @@ a:hover, a:active, a:focus {
 
 .overlay {
   background: rgba(0,0,0,0.7 );
-  width: 100%;
-  height: 100vh;
+  max-width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -302,14 +310,17 @@ a:hover, a:active, a:focus {
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-     align-items: center;
+    align-items: center;
     position: relative;
     text-align: center;
 }
 
 .main-home {
   background: url('../images/home-bg.jpg') no-repeat;
-  height: 100vh;
+  background-size: 100% 100%;
+  min-height: 100vh;
+  /* max-width: 100%; */
+  /* height: auto; */
 }
 
 .main-about {
