@@ -110,14 +110,14 @@ html{
 }
 
 a {
-  color: #4d638c;
+  color: #dbcca3;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
   text-decoration: none !important;
 }
 a:hover, a:active, a:focus {
-  color: #4d638c;
+  color: #abb0b8;
   outline: none;
 }
 
