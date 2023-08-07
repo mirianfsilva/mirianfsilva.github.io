@@ -742,6 +742,12 @@ footer .footer-copyright {
     list-style: none;
 }
 
+.social-icon li a svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
 .social-icon li a {
     border: 2px solid #ffffff;
     color: #fdfbfb;
@@ -841,4 +847,14 @@ SVG Icons - svgicons.sparkk.fr
 .svg-icon circle {
   stroke: #4691f6;
   stroke-width: 1;
+}
+
+.icon {
+  /* Set the dimensions of the icon */
+  width: 24px;
+  height: 24px;
+
+  /* Set other styles as needed, e.g., color, margin, etc. */
+  fill: #000; /* You can use 'fill' to set the SVG color */
+  margin-right: 10px;
 }
