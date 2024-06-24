@@ -12,7 +12,7 @@ http://www.tooplate.com/view/2085-neuron
 
 html, body {
   min-height: 100%;
-  font-size: 14px;
+  font-size: 12px;
   background: #232323;
   margin: 0;
   background-size: cover;
@@ -24,7 +24,7 @@ body {
     font-style: normal;
 		font-weight: 300;
     overflow-x: hidden;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.2px;
 }
 
@@ -48,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 25px;
     padding-bottom: 14px;
     margin-bottom: 0px;
 }
