@@ -76,9 +76,9 @@ a, a:visited {
     }
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 750px) {
     .profile {
-        width: 720px;
+        width: 750px;
         margin: 3em 0 0 -350px;
         left: 50%;
         padding: 20px 40px;
@@ -128,7 +128,8 @@ a, a:visited {
 
 .profile ul.links > li {
     display: inline-block;
-    margin: 0em 1em 0 0.25em;
+    margin: 0em 1em 0 0.20em;
+    padding-inline-start: 0em;
 }
 
 .divider::before {
@@ -168,6 +169,7 @@ ul.my-stuff > li {
     margin-bottom: 1ex;
 }
 
+
 ul.my-stuff > li:before {
     font-family: "bootstrap-icons" !important;
     margin: 0em 1em;
@@ -176,6 +178,16 @@ ul.my-stuff > li:before {
     margin-left: -12px;
     position: absolute;
     left: -1.5em;
+}
+
+.lattes-icon {
+    width: 1em;
+    height: 0.85em;
+    display: inline-block;
+    background-image: url('/img/lattes.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    vertical-align: middle;
 }
 
 #stuff > ul.my-stuff > li:nth-child(1):before { content: "\F67A"; }
