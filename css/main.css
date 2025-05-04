@@ -26,19 +26,29 @@ a, a:visited {
     color:#8f4f4f
 }
 
+.container {
+    max-width: 1200px; /* 100%*/
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+}
+
 /* FIXED SIDEBAR */
 
 .sidebar {
-    background-color: #c9c1c1; /* Light background, similar to the example */
+    background-color: #ffffff; /* Light background, similar to the example */
     color: #000; /* Darker text */
     width: 23%; /* Adjust width as needed */
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
+    /* height: fit-content; */
     overflow-y: auto; /* Enable scrolling if sidebar content overflows */
     box-sizing: border-box;
-    padding: 20px; /* Add some padding around the entire sidebar */
+    padding: 25px; /* Add some padding around the entire sidebar */
     font-family: 'Noto Sans', sans-serif;
 }
 
