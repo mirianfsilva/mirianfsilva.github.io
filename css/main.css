@@ -1,23 +1,22 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400&family=Merriweather:wght@300&family=Rubik+Pixels&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap'); */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
-body {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 15px;
-    min-height: 100vh; /* Ensure body takes at least full viewport height */
 
+body {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.5;
+    margin: 0;
+    background-color: #fffcf8;
 }
 
 h1, h2, h3 {
-    font-family: 'Merriweather', serif;
-    /* text-transform: uppercase; */
+    font-family: system-ui, "Segoe UI", sans-serif;
 }
 
 p, li {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 1em;
-    line-height: 1.5em;
+    font-size: 0.95rem;
+    letter-spacing: 0.025rem;
 }
 
 a, a:visited {
@@ -27,43 +26,58 @@ a, a:visited {
 }
 
 .container {
-    max-width: 1200px; /* 100%*/
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 40px;
+    display: flex;
+    max-width: 1200px;
+    margin: 80px auto; /* Adjusts the top spacing from edge */
+    padding: 0 40px; /* Padding from edges */
+    gap: 40px; /* Space between columns */
+    position: relative;
 }
 
-/* FIXED SIDEBAR */
 
+/* Sidebar fixed on the left */
+/* Fixed sidebar, not at screen edge */
 .sidebar {
-    background-color: #ffffff; /* Light background, similar to the example */
-    color: #000; /* Darker text */
-    width: 23%; /* Adjust width as needed */
+    /* flex: 1; */
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    /* height: fit-content; */
-    overflow-y: auto; /* Enable scrolling if sidebar content overflows */
+    top: 80px;
+    left: 10%;             /* Creates space on the left */
+    width: 260px;
+    /* max-width: 300px; */
+    height: calc(100vh - 160px); /* Full height minus top and bottom margins */
+    padding: 25px;
+    overflow-y: auto;
     box-sizing: border-box;
-    padding: 25px; /* Add some padding around the entire sidebar */
-    font-family: 'Noto Sans', sans-serif;
 }
+
 
 .sidebar-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    padding: 40px; /* Adjust this value to your preference */
+    align-items: center;
+}
+
+.sidebar-content a {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 5px;
+    color: #5e5656;
+    font-size: 0.9rem;
+}
+
+.sidebar-content i {
+    margin-right: 10px;
+    font-size: 0.9rem; /* Adjust icon size */
+    color: #000; /* Example icon color */
+    width: 1rem; /* Ensure consistent icon width */
+    text-align: center;
 }
 
 .profile-image {
-    width: 150px; /* Adjust image size */
+    width: 150px;
     height: 150px;
-    border-radius: 50%; /* Make it circular */
-    object-fit: cover; /* Ensure image covers the circle without distortion */
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
@@ -75,28 +89,25 @@ a, a:visited {
 
 .sidebar-bio {
     font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
     text-align: center;
     color: #5e5656; /* Slightly lighter text for bio */
-    font-family: 'Noto Sans', sans-serif;
 }
 
 .sidebar-links {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Make the list take full width */
+    /* width: 100%; Make the list take full width */
 }
 
 .sidebar-links li {
-    margin-bottom: 10px;
     display: flex;
     align-items: center; /* Vertically align icon and text */
 }
 
 .sidebar-links i {
-    margin-right: 10px;
     font-size: 1rem; /* Adjust icon size */
     color: #000; /* Example icon color */
     width: 1.1em; /* Ensure consistent icon width */
@@ -104,74 +115,83 @@ a, a:visited {
 }
 
 .sidebar-links span {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .sidebar-links a { /* Target the actual link elements if you make them */
     text-decoration: none;
     color: #495057; /* Default link color */
     display: block; /* Make the whole list item clickable */
-    padding: 3px 0; /* Add some vertical padding for better touch targets */
 }
 
-.sidebar-links li:hover i {
+.sidebar-links li:hover i, .sidebar-content a:hover i {
     color: #8f4f4f; /* Highlight color for the icon on hover */
 }
 
-.sidebar-links li:hover span {
+.sidebar-links li:hover span, .sidebar-content a:hover span {
     color: #8f4f4f; /* Highlight color for the text on hover */
+}
+
+.redirect-page {
+    margin-bottom: 20px;
+    /* transition: transform 0.3s ease; */
+}
+.redirect-page a:hover {
+    transform: translateY(-3px); /* Slightly lift the element on hover */
+}
+.redirect-page i {
+    text-decoration: none;
+    color: #8f4f4f; /* Link color */
+    font-weight: bold;
 }
 
 /* CONTENT */
 
-.profile > nav {
-    position: fixed;
-    top: 13rem;
-    left: 50%;
-    margin-left: -500px;
-}
-
-.profile > nav h3 {
-    font-weight: normal;
-}
-
-.profile > nav ol { padding-left: 1em; }
-.profile > nav ol a:before { content: none; }
-
-.profile ul.links a {
-    color: #000;
-}
-
-.profile ul.links a::before {
-    content: none;
-}
-
-.profile ul.links > li > a:hover,
-.profile ul.links > li > a:focus {
-    color: #705757 !important;
-    /* content: none; */
-}
-
-
-.profile {
-    position: absolute;
-    top: 0%;
+.content {
+    /* flex: 2; */
+    margin-left: calc(80px + 260px);
+    max-width: 800px;
+    padding: 20px 40px;
     box-sizing: border-box;
 }
 
-.profile b {
-    font-weight: 500;
+.content > nav {
+    position: fixed;
+    top: 13rem;
 }
 
-.profile section { margin-top: 2em; }
-.profile section.sidebar { margin-top: 0; }
+.content > nav h3 {
+    font-weight: normal;
+}
 
-.profile ul.links {
+.content > nav ol { padding-left: 1em; }
+.content > nav ol a:before { content: none; }
+
+.content ul.links a {
+    color: #000;
+}
+
+.content ul.links a::before {
+    content: none;
+}
+
+.content ul.links > li > a:hover,
+.content ul.links > li > a:focus {
+    color: #705757 !important;
+}
+
+.content b {
+    font-weight: 400;
+}
+
+.content section { margin-top: 3em; }
+
+.content ul.links {
     list-style: none;
     clear: both;
 }
 
-.profile ul.links > li {
+.content ul.links > li {
     display: inline-block;
     margin: 0em 1em 0 0.20em;
     padding-inline-start: 0em;
@@ -194,8 +214,6 @@ a, a:visited {
 }
 
 .paragraph i {
-    /*  background-color: #4169e1;
-    background-image: linear-gradient(45deg, #4169e1, #af4261); */
     font-weight: bold;
     margin-right: 2em;
 }
@@ -243,26 +261,36 @@ ul.my-stuff > li:before {
 
 #research > ul.my-stuff > li:before { content: "\F194"; }
 
-/* Responsive adjustments for tablets and smaller desktops */
-@media screen and (max-width: 599px) {
-    .profile {
-        width: 100%;
-        padding: 10px;
-    }
+.site-footer {
+  width: 100%;
+  background-color: #eee; /* You can change this */
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 80px; /* Space between content and footer */
+}
 
-    .sidebar img {
-        width: 25%;
-        max-width: 100px;
+/* Responsive adjustments for tablets and smaller desktops */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+    .container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 20px;
+        margin: 40px auto;
     }
 }
 
 @media screen and (min-width: 800px) {
-    .profile {
+    /* .content {
         width: 800px;
         margin: 3em 0 0 -400px;
         left: 50%;
         padding: 20px 40px;
-    }
+    } */
 
     .sidebar img {
         height: 150px;
@@ -270,29 +298,33 @@ ul.my-stuff > li:before {
     }
 }
 
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     nav {
         display: none;
     }
-}
+} */
 
 @media (max-width: 768px) {
-    body {
-        flex-direction: column; /* Stack sidebar and content vertically */
-    }
-
     .sidebar {
-        position: static; /* Make sidebar scroll with content */
+        position: static;
+        width: 100%;
+        height: auto;
+        left: 0;
+        padding: 15px;
+    }
+    
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    /* .sidebar {
+        position: static; 
         width: 100%;
         height: auto;
         margin-bottom: 20px;
-        border-bottom: 1px solid #dee2e6; /* Add a separator */
+        border-bottom: 1px solid #dee2e6; 
         padding: 15px;
-    }
-
-    .content {
-        margin-left: 0; /* Remove left margin */
-    }
+    } */
 
     .sidebar-content {
         flex-direction: row; /* Arrange image, name, bio horizontally */
