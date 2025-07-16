@@ -53,7 +53,7 @@
       <div class="sidebar-content">
         <img src="img/avatar.png" alt="Mírian Silva profile picture" class="profile-image" />
         <h1 class="sidebar-name">Mírian Silva</h1>
-        <p class="sidebar-bio">AI Engineer @ IBM Research. <br> MSc in Computer Science @ UFMG, Brasil. AI/ML
+        <p class="sidebar-bio">AI Engineer @ IBM Research. MSc in Computer Science @ UFMG, Brasil. AI/ML
           Fairness, ethics.
         </p>
         <div class="redirect-page">
@@ -63,6 +63,34 @@
             <i class="bi bi-arrow-up-right"></i><span>Resume</span>
           </a>
         </div>
+
+        <button class="hamburger-menu" aria-label="Toggle navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <div class="nav-links-mobile" id="mobileNavLinks">
+          <div class="sidebar-links">
+            <ul class="sidebar-links">
+              <li><a href="mailto:mirianfrsilva@gmail.com" title="Contact Me!" target="_blank"
+                  rel="noopener noreferrer"><i class="bi bi-envelope-at"></i><span>mirianfrsilva@gmail.com</span></a>
+              </li>
+              <li><a href="https://github.com/mirianfsilva" title="Github" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-github"></i><span>mirianfsilva</span></a></li>
+              <li><a href="https://www.linkedin.com/in/mirianfsilva/" title="LinkedIn" target="_blank"
+                  rel="noopener noreferrer"><i class="bi bi-linkedin"></i><span>in/mirianfsilva</span></a></li>
+              <li><a href="https://medium.com/@mirianfsilva" title="Medium" target="_blank" rel="noopener noreferrer"><i
+                    class="bi bi-medium"></i><span>@mirianfsilva</span></a></li>
+              <li><a href="https://twitter.com/mirianfrsilva" title="Twitter" target="_blank"
+                  rel="noopener noreferrer"><i class="bi bi-twitter"></i><span>@mirianfrsilva</span></a></li>
+              <li><a href="https://research.ibm.com/people/mirian-silva" title="IBM Research" target="_blank"
+                  rel="noopener noreferrer"><i class="bi bi-briefcase"></i><span>IBM Research Profile</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+
         <ul class="sidebar-links">
           <li><a href="mailto:mirianfrsilva@gmail.com" title="Contact Me!" target="_blank" rel="noopener noreferrer"><i
                 class="bi bi-envelope-at"></i><span>mirianfrsilva@gmail.com</span></a></li>
@@ -87,7 +115,7 @@
     <div class="content">
       <section class="about-me paragraph" id="about-me">
         <p>
-          <i>About me</i>
+          <b>About me</b>
           I like to travel, buy more books than read, and watch superheroes and horror movies, with a
           subscription to all streams so I don't miss any TV shows. I don't actively consume YouTube, but I enjoy
           videos like 3Blue1Brown. I recently became a Jedi (MSc) :)
@@ -96,29 +124,27 @@
 
       <section class="stuff paragraph divider" id="research">
         <p>
-          <i>Research Interest </i>
+          <b>Research Interest </b>
         </p>
         <ul class="org-ul my-stuff">
           <li>
             Fairness and Bias in AI, Ethics & Trustworthy AI. Interdiciplinary research in AI and Law, AI and
-            Social Sciences, AI and Public Policy are currently my main topic of interest. If you are working on these
-            or related topics, and search for research collaborations feel free to reach out to me.
+            Social Sciences, AI and Public Policy are currently my main research topic of interest. If you are working
+            on these or related topics, and search for research collaborations feel free to reach out to me.
           </li>
-          <!-- <li>
-            Cool stuff with math applied and computational biology applications usually got my attention too.
-          </li> -->
       </section>
 
       <section class="stuff paragraph divider" id="stuff">
         <p>
-          <i>TLDR: Academic and Professional background</i>
+          <b>TLDR: Academic and Professional background</b>
         </p>
 
         <ul class="org-ul my-stuff">
           <li>
             I've been an AI Engineer at <a href="https://research.ibm.com/">IBM Research</a> since 2021. I work with
             the AI Models Team and the MIT-IBM Watson AI Lab, mainly programming cool stuff related to foundation
-            models, generative AI, doing a lot of AI engineering.
+            models and generative AI. Currently topics of work include: LLMs evaluations, validation process, prompt
+            engineering, data science, data process, AI agentic assistants.
             <ul>
               <li>Open-source projects: <a
                   href="https://github.com/IBM/ibm-generative-ai">github.com/IBM/ibm-generative-ai</a>.
@@ -160,6 +186,40 @@
       </section>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hamburgerButton = document.querySelector('.hamburger-menu');
+      const mobileNavLinks = document.getElementById('mobileNavLinks');
+
+      // Add 'hidden' class on page load if screen is small
+      if (window.innerWidth <= 768) { // Match your CSS breakpoint
+        mobileNavLinks.classList.add('hidden');
+      }
+
+      hamburgerButton.addEventListener('click', function () {
+        mobileNavLinks.classList.toggle('hidden');
+        hamburgerButton.classList.toggle('open');
+      });
+
+      // Optional: Hide menu if screen resizes to desktop
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+          mobileNavLinks.classList.remove('hidden');
+          hamburgerButton.classList.remove('open');
+        } else {
+          // Only add hidden if it's currently visible on mobile and resized
+          // This prevents it from being hidden if the user explicitly opened it and then resized slightly
+          // Better to re-hide if the screen goes to mobile size after desktop
+          if (!mobileNavLinks.classList.contains('hidden')) { // Keep open if user opened it
+            // Or, always hide it if it's a new mobile state:
+            mobileNavLinks.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+
+
   <footer class="site-footer">
     <p>&copy; 2025 Mírian Silva. All rights reserved.</p>
   </footer>
