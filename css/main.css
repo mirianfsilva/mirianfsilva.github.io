@@ -8,6 +8,9 @@ body {
     line-height: 1.5;
     margin: 0;
     background-color: #fffcf8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -32,6 +35,7 @@ a, a:visited {
     padding: 0 40px; /* Padding from edges */
     gap: 40px; /* Space between columns */
     position: relative;
+    flex: 1;
 }
 
 
@@ -181,8 +185,15 @@ a, a:visited {
     /* flex: 2; */
     margin-left: calc(80px + 260px);
     max-width: 800px;
+    width: 100%;
     padding: 20px 40px;
     box-sizing: border-box;
+}
+
+@media (min-width: 769px) {
+    .content {
+        width: 800px;
+    }
 }
 
 .content > nav {
@@ -226,6 +237,83 @@ a, a:visited {
     margin: 0em 1em 0 0.20em;
     padding-inline-start: 0em;
 }
+
+.content-root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+.markdown-section ul {
+    padding-left: 2.5em;
+}
+
+.markdown-section ul ul {
+    padding-left: 1.5em;
+}
+
+.markdown-section ul > li {
+    position: relative;
+    margin-bottom: 1ex;
+}
+
+/* Main tabs (Home, Talks & Presentations) */
+.main-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1pt solid #AAA;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.main-tab-button {
+    background: none;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #495057;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+    font-family: system-ui, "Segoe UI", sans-serif;
+}
+
+.main-tab-button.active {
+    color: #8f4f4f;
+    border-bottom-color: #8f4f4f;
+    font-weight: bold;
+}
+
+.main-tab-button:hover {
+    color: #8f4f4f;
+}
+
+.main-tab-panels {
+    width: 100%;
+    position: relative;
+}
+
+.main-tab-panel {
+    display: none;
+    width: 100%;
+    min-height: 400px;
+}
+
+/* Prevent long URLs/text in tabs from forcing wider layouts */
+.main-tab-panel,
+.markdown-section,
+.markdown-section p,
+.markdown-section li,
+.markdown-section a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.main-tab-panel.active {
+    display: block;
+}
+
 
 .divider::before {
     content: "";
@@ -323,9 +411,24 @@ ul.my-stuff > li:before {
         margin-left: 0; 
         padding: 10px 15px; 
         width: 100%; /* Take full width */
+        max-width: 100%;
     }
 
     .content section { margin-top: 2em; }
+
+    .main-tab-panels {
+        width: 100%;
+    }
+
+    .main-tab-panel {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .main-tab-button {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
 
     .sidebar img {
         height: 120px;
