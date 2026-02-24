@@ -11,6 +11,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: #404043;
 }
 
 h1, h2, h3 {
