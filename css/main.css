@@ -763,6 +763,34 @@ h2 .accent { color: var(--accent); }
   color: var(--ink-mute);
 }
 
+/* Open-source compact list (sits inside .service-strip) */
+.os-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.os-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.os-name {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+}
+.os-name:hover { border-bottom-color: var(--accent); }
+.os-desc { color: var(--ink-soft); }
+
+/* Stack consecutive strips with a small gap */
+.service-strip + .service-strip { margin-top: 10px; }
+
 /* Footer line under background */
 .cv-footer {
   margin-top: 22px;
