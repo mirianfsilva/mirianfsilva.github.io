@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light dark;
   --bg:           #fbf8f3;
   --bg-elev:      #ffffff;
   --bg-tint:      #f3ece2;
@@ -19,6 +20,90 @@
   --workshop:     #6b6258;
   --workshop-bg:  #efeae0;
   --sidebar-w:    300px;
+}
+
+/* Force higher specificity for the page background so injected resets don't override it.
+   !important is needed because some preview sandboxes inject `html, body { background: none }`
+   late in the cascade — this guarantees our theme value wins everywhere. */
+:root[data-theme] body {
+  background-color: var(--bg) !important;
+  color: var(--ink) !important;
+}
+:root[data-theme] html { background-color: var(--bg) !important; }
+
+/* ========== DARK MODE ========== */
+[data-theme="dark"] {
+  --bg:           #1a1715;     /* warm near-black */
+  --bg-elev:      #221e1b;
+  --bg-tint:      #2a2521;
+  --ink:          #f0e9dd;
+  --ink-soft:     #bdb5a8;
+  --ink-mute:     #8a8278;
+  --rule:         #3a332d;
+  --rule-soft:    #2e2823;
+  --accent:       #d99696;     /* lighter wine for contrast on dark */
+  --accent-deep:  #e8b3b3;
+  --accent-soft:  #3a2624;
+  --neurips:      #8caedf;
+  --neurips-bg:   #1d2a3f;
+  --colm:         #d99696;
+  --colm-bg:      #3a2624;
+  --icml:         #7fbf7f;
+  --icml-bg:      #1d3320;
+  --workshop:     #bdb5a8;
+  --workshop-bg:  #2a2521;
+}
+[data-theme="dark"] .badge.thesis    { background: #2a1f3d; color: #c5b3f0; }
+[data-theme="dark"] .badge.talk      { background: #1f3232; color: #9bc7c7; }
+[data-theme="dark"] .badge.arxiv     { background: #3d231a; color: #e8957c; }
+[data-theme="dark"] .badge.preprint  { background: #322a18; color: #d9c074; }
+[data-theme="dark"] .cv-now          { background: #1d3320; color: #7fbf7f; }
+[data-theme="dark"] .proj-tag.award  { background: #322a18; color: #d9c074; }
+[data-theme="dark"] .avatar {
+  box-shadow: 0 0 0 1px var(--rule), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+}
+[data-theme="dark"] .tabs {
+  background: linear-gradient(180deg, var(--bg) 80%, transparent);
+}
+
+/* Smooth transition between themes */
+html, body, .shell, .project, .feat, .pill, .btn, .chip, .interests li,
+.facts, .service-strip, .news-list li, .links a, .tab, .badge, .pub-meta {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+/* ========== THEME TOGGLE BUTTON ========== */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  background: var(--bg-elev);
+  color: var(--ink-soft);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 0;
+  transition: border-color .15s ease, transform .25s ease,
+              background-color .25s ease, color .15s ease;
+}
+#theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: rotate(-12deg);
+}
+#theme-toggle svg { width: 16px; height: 16px; }
+#theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] #theme-toggle .icon-sun  { display: none; }
+[data-theme="dark"] #theme-toggle .icon-moon { display: block; }
+
+@media (max-width: 520px) {
+  #theme-toggle { top: 12px; right: 12px; width: 34px; height: 34px; }
 }
 
 * { box-sizing: border-box; }
@@ -66,13 +151,7 @@ aside.sidebar {
   position: sticky;
   top: 40px;
   align-self: start;
-  max-height: calc(100vh - 80px);
-  overflow-y: auto;
-  padding-right: 4px;
-  scrollbar-width: thin;
 }
-aside.sidebar::-webkit-scrollbar { width: 4px; }
-aside.sidebar::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 2px; }
 
 .avatar {
   position: relative;
@@ -91,16 +170,6 @@ aside.sidebar::-webkit-scrollbar-thumb { background: var(--rule); border-radius:
   object-fit: cover;
   display: block;
 }
-.avatar::after {
-  /* tiny status dot — playful "currently building" cue */
-  content: "";
-  position: absolute;
-  right: 10px; bottom: 10px;
-  width: 14px; height: 14px;
-  border-radius: 50%;
-  background: #4cae5a;
-  box-shadow: 0 0 0 3px var(--bg);
-}
 
 .name {
   font-family: "IBM Plex Serif", Georgia, serif;
@@ -111,7 +180,7 @@ aside.sidebar::-webkit-scrollbar-thumb { background: var(--rule); border-radius:
   margin: 0 0 4px;
   color: var(--ink);
 }
-.name .accent-mark { color: var(--accent); }
+.name .accent-mark { color: var(--ink); }
 
 .role {
   margin: 0 0 4px;
@@ -254,6 +323,34 @@ aside.sidebar::-webkit-scrollbar-thumb { background: var(--rule); border-radius:
 }
 .links a:hover .ext { opacity: 1; }
 
+/* Compact icon row (used for the sidebar "Elsewhere" section) */
+.social-row {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.social-row a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+  background: var(--bg-elev);
+  color: var(--ink-soft);
+  transition: background-color .15s ease, color .15s ease,
+              border-color .15s ease, transform .15s ease;
+}
+.social-row a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+.social-row svg { width: 15px; height: 15px; }
+
 /* Sidebar news */
 .news-list {
   list-style: none;
@@ -363,7 +460,7 @@ h2 .accent { color: var(--accent); }
   color: var(--ink-soft);
   font-size: 15.5px;
   line-height: 1.7;
-  text-wrap: pretty;
+  text-wrap: pretty; /* Safari <17.5 ignores this gracefully */
 }
 .prose p strong { color: var(--ink); font-weight: 600; }
 
@@ -886,7 +983,6 @@ footer.site-foot a:hover { color: var(--accent); }
   }
   aside.sidebar {
     position: static;
-    max-height: none;
   }
   .sidebar-inner {
     display: grid;
