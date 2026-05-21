@@ -1,159 +1,761 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FK0PWM3DLR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-FK0PWM3DLR');
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="Org Mode" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="HandheldFriendly" content="true" />
-  <link rel="shortcut icon" href="./img/vader.ico" />
+  <!-- counter.dev -->
   <script>
-    if (
-      !sessionStorage.getItem("_swa") &&
-      document.referrer.indexOf(location.protocol + "//" + location.host) !==
-      0
-    ) {
-      fetch(
-        "https://counter.dev/track?" +
-        new URLSearchParams({
-          referrer: document.referrer,
-          screen: screen.width + "x" + screen.height,
-          user: "mirianfsilva",
-          utcoffset: "-3",
-        })
-      );
+    if (!sessionStorage.getItem("_swa") &&
+      document.referrer.indexOf(location.protocol + "//" + location.host) !== 0) {
+      fetch("https://counter.dev/track?" + new URLSearchParams({
+        referrer: document.referrer,
+        screen: screen.width + "x" + screen.height,
+        user: "mirianfsilva",
+        utcoffset: "-3",
+      }));
     }
     sessionStorage.setItem("_swa", "1");
   </script>
 
-  <title>Mirian Silva</title>
-  <meta property="og:site_name" content="Mirian Silva" />
+  <title>Mírian Silva — AI Engineer &amp; Research Fellow</title>
+  <meta property="og:site_name" content="Mírian Silva" />
   <meta property="og:locale" content="en-us" />
-  <meta property="twitter:site" content="@https://twitter.com/mirianfrsilva" />
-  <meta property="twitter:creator" content="@https://twitter.com/mirianfsilva" />
-  <link rel="stylesheet" media="screen" href="css/main.css" />
+  <meta property="twitter:site" content="@mirianfrsilva" />
+  <meta property="twitter:creator" content="@mirianfrsilva" />
+  <link rel="shortcut icon" href="img/vader.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-  <div class="container">
-    <div class="sidebar">
-      <div class="sidebar-content">
-        <img src="img/avatar.png" alt="Mírian Silva profile picture" class="profile-image" />
-        <h1 class="sidebar-name">Mírian Silva</h1>
-        <p class="sidebar-bio">AI Engineer @ IBM Research. MSc in Computer Science @ UFMG, Brasil.
-        </p>
-        <div class="redirect-page">
-          <a href="https://scholar.google.com/citations?user=6vP2segAAAAJ" title="Google Scholar" target="_blank"
-            rel="noopener noreferrer"><i class="bi bi-arrow-up-right"></i><span>Google Scholar</span></a>
-          <a href="resume.html" title="resume" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-arrow-up-right"></i><span>Resume</span>
-          </a>
+  <div class="shell">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <div>
+          <div class="avatar">
+            <img src="img/avatar.png" alt="Mírian Silva" style="object-fit: cover" />
+          </div>
         </div>
-
-        <button class="hamburger-menu" aria-label="Toggle navigation">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-
-        <div class="nav-links-mobile" id="mobileNavLinks">
-          <div class="sidebar-links">
-            <ul class="sidebar-links">
-              <li><a href="mailto:mirianfrsilva@gmail.com" title="Contact Me!" target="_blank"
-                  rel="noopener noreferrer"><i class="bi bi-envelope-at"></i><span>mirianfrsilva@gmail.com</span></a>
-              </li>
-              <li><a href="https://github.com/mirianfsilva" title="Github" target="_blank" rel="noopener noreferrer">
-                  <i class="bi bi-github"></i><span>mirianfsilva</span></a></li>
-              <li><a href="https://www.linkedin.com/in/mirianfsilva/" title="LinkedIn" target="_blank"
-                  rel="noopener noreferrer"><i class="bi bi-linkedin"></i><span>in/mirianfsilva</span></a></li>
-              <li><a href="https://medium.com/@mirianfsilva" title="Medium" target="_blank" rel="noopener noreferrer"><i
-                    class="bi bi-medium"></i><span>@mirianfsilva</span></a></li>
-              <li><a href="https://twitter.com/mirianfrsilva" title="Twitter" target="_blank"
-                  rel="noopener noreferrer"><i class="bi bi-twitter"></i><span>@mirianfrsilva</span></a></li>
-              <!-- <li><a href="https://research.ibm.com/people/mirian-silva" title="IBM Research" target="_blank"
-                  rel="noopener noreferrer"><i class="bi bi-briefcase"></i><span>IBM Research Profile</span></a></li> -->
-            </ul>
+        <div>
+          <!-- ✏️ EDIT: Name (the surname is wrapped in a span you can re-color) -->
+          <h1 class="name">Mírian <span class="accent-mark" style="color: rgb(31, 29, 27)">Silva</span></h1>
+          <!-- ✏️ EDIT: Primary role (current job) -->
+          <p class="role">Staff DS &amp; AI Engineer <span class="at">@</span> Flash Technology</p>
+          <!-- ✏️ EDIT: Secondary role (fellowships) -->
+          <p class="role-sub">Research Fellow <span class="at">@</span> Black in AI Safety &amp; Ethics · SPAR</p>
+          <!-- ✏️ EDIT: One-line bio under the name -->
+          <p class="bio">
+            Building production AI with LLMs, agents, evaluation. Researching AI safety eval &amp; fairness on
+            the side. MSc CS, UFMG · Belo Horizonte, Brazil.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://scholar.google.com/citations?user=6vP2segAAAAJ" target="_blank"
+              rel="noopener">
+              Google&nbsp;Scholar <span class="arrow">↗</span>
+            </a>
+            <a class="btn btn-ghost" href="resume.html" target="_blank" rel="noopener">
+              Résumé <span class="arrow">↗</span>
+            </a>
           </div>
         </div>
 
+        <!-- ============================================================
+             ✏️ EDIT: "ELSEWHERE" sidebar links (email, github, linkedin, etc.)
+             Each <li> is one row. To remove a service, delete its <li>.
+             ============================================================ -->
+        <div class="side-section">
+          <p class="side-label">Elsewhere</p>
+          <ul class="links">
+            <li>
+              <a href="mailto:mirianfrsilva@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+                <span>mirianfrsilva@gmail.com</span>
+                <span class="ext">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/mirianfsilva" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.32-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.95.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18a10.93 10.93 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06.74.81 1.18 1.84 1.18 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.05.78 2.13v3.15c0 .31.21.68.8.56C20.22 21.38 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+                </svg>
+                <span>mirianfsilva</span>
+                <span class="ext">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/mirianfsilva/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5a2.5 2.5 0 1 1 0 5.01 2.5 2.5 0 0 1 0-5.01ZM3 9.5h4v11H3v-11Zm6.5 0H13v1.55h.05c.5-.9 1.7-1.85 3.5-1.85 3.75 0 4.45 2.45 4.45 5.65V20.5h-4v-4.85c0-1.15-.02-2.65-1.6-2.65-1.6 0-1.85 1.25-1.85 2.55V20.5h-4v-11Z" />
+                </svg>
+                <span>in/mirianfsilva</span>
+                <span class="ext">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://medium.com/@mirianfsilva" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.37 7.3c.03-.28-.07-.55-.27-.74L2.05 4.07v-.36h6.32l4.88 10.7L17.55 3.71h6.02v.36l-1.75 1.68a.51.51 0 0 0-.19.49v12.32a.51.51 0 0 0 .19.49l1.71 1.68v.36h-8.6v-.36l1.77-1.72c.17-.17.17-.22.17-.49V8.61L12 21.07h-.66L5.6 8.61v8.34c-.05.36.07.72.32.97l2.3 2.79v.36h-6.5v-.36l2.3-2.79c.26-.25.37-.62.31-.97V7.3Z" />
+                </svg>
+                <span>@mirianfsilva</span>
+                <span class="ext">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/mirianfrsilva" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+                </svg>
+                <span>@mirianfrsilva</span>
+                <span class="ext">↗</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://research.ibm.com/people/mirian-silva" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" />
+                  <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                  <path d="M2 13h20" />
+                </svg>
+                <span>IBM Research profile</span>
+                <span class="ext">↗</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-        <ul class="sidebar-links">
-          <li><a href="mailto:mirianfrsilva@gmail.com" title="Contact Me!" target="_blank" rel="noopener noreferrer"><i
-                class="bi bi-envelope-at"></i><span>mirianfrsilva@gmail.com</span></a></li>
-          <!-- <li><a href="resume.html" title="Resume" target="_blank" rel="noopener noreferrer"><i
-                  class="bi bi-file-earmark-person-fill"></i><span>CV/Resume</span></a></li> -->
-          <li><a href="https://github.com/mirianfsilva" title="Github" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-github"></i><span>mirianfsilva</span></a></li>
-          <li><a href="https://www.linkedin.com/in/mirianfsilva/" title="LinkedIn" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-linkedin"></i><span>in/mirianfsilva</span></a></li>
-          <li><a href="https://medium.com/@mirianfsilva" title="Medium" target="_blank" rel="noopener noreferrer"><i
-                class="bi bi-medium"></i><span>@mirianfsilva</span></a></li>
-          <!-- <li><a href="https://scholar.google.com/citations?user=6vP2segAAAAJ" title="Google Scholar" target="_blank"
-                rel="noopener noreferrer"><i class="bi bi-mortarboard"></i><span>Google Scholar</span></a></li> -->
-          <li><a href="https://twitter.com/mirianfrsilva" title="Twitter" target="_blank" rel="noopener noreferrer"><i
-                class="bi bi-twitter"></i><span>@mirianfrsilva</span></a></li>
-          <!-- <li><a href="https://research.ibm.com/people/mirian-silva" title="IBM Research" target="_blank"
-              rel="noopener noreferrer"><i class="bi bi-briefcase"></i><span>IBM Research Profile</span></a></li> -->
-        </ul>
+        <!-- ============================================================
+             ✏️ EDIT: "RECENT" news feed in the sidebar.
+             Format per item: <li><span class="date">…</span><span>…</span></li>
+             Keep it short — 4-6 items max so the sidebar stays compact.
+             ============================================================ -->
+        <div class="side-section">
+          <p class="side-label">Recent</p>
+          <ul class="news-list">
+            <li><span class="date">May ’26</span><span>Started as <strong>Research Fellow</strong> at <a
+                  href="https://www.baseresearch.org" target="_blank" rel="noopener">Black in AI Safety &amp;
+                  Ethics</a>, supervised by <a href="https://www.linkedin.com/in/serena-oduro/" target="_blank"
+                  rel="noopener">Serena Oduro</a>
+                (Data &amp;
+                Society) on AI safety evaluation practices.</span></li>
+            <li><span class="date">Apr ’26</span><span>Joined <strong>Flash Technology</strong> as Staff Data Scientist
+                &amp; AI Engineer.</span></li>
+            <li><span class="date">Feb ’26</span><span>Started AI Safety Research Fellowship at <strong>SPAR</strong> —
+                efficient LLM safety benchmarking via IRT.</span></li>
+            <li><span class="date">Jan ’26</span><span>Wrapped up 4+ years at <strong>IBM Research</strong>.</span></li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </aside>
 
-    <div class="content">
-      <div id="content-root" class="content-root"></div>
-    </div>
+    <!-- ==================== CONTENT ==================== -->
+    <main class="content">
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="home" role="tab">Home</button>
+        <button class="tab" data-tab="research" role="tab">Research <span class="count">6</span></button>
+        <button class="tab" data-tab="talks" role="tab">Talks <span class="count">6</span></button>
+      </nav>
+
+      <!-- ============ HOME ============ -->
+      <section class="panel active" id="panel-home" role="tabpanel">
+
+        <!-- ✏️ EDIT: Optional lead/tagline at the top of Home (currently empty). -->
+        <p class="lead">
+        </p>
+
+        <!-- ============================================================
+             ✏️ EDIT: ABOUT (Home).
+             3 short paragraphs: what you do · research · education.
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>About<span class="accent">.</span></h2>
+            <span class="section-kicker"></span>
+          </div>
+          <div class="prose">
+            <p style="font-family: 'IBM Plex Sans'">
+              I'm an <strong>AI Engineer</strong> working on production AI systems for finance — LLMs, agentic
+              architectures, evaluation frameworks, and applied ML.
+            </p>
+            <p style="font-family: 'IBM Plex Sans'">
+              On the research side, I'm a <strong>Research Fellow at Black in AI Safety &amp; Ethics</strong>,
+              collaborating with <a href="https://www.linkedin.com/in/serena-oduro/" target="_blank"
+                rel="noopener">Serena Oduro</a>
+              (Data &amp; Society Institute) on assessing AI safety evaluation practices and whether they meaningfully
+              address safety concerns impacting Black communities. I'm also an <strong>AI Safety
+                Research Fellow at SPAR</strong>, working on efficient LLM safety benchmarking with Item Response
+              Theory.
+            </p>
+            <p style="font-family: 'IBM Plex Sans'">
+              I hold an <strong>MSc in Computer Science from UFMG</strong>, with research focused on ML fairness and
+              bias mitigation, plus a <strong>B.Sc in Computational Mathematics</strong> from the same university.
+            </p>
+          </div>
+        </div>
+
+        <!--
+          NOTE: Selected work + Open-source sections are commented out — these reflect collaborative
+          work where I'm not primary author. Uncomment (and update with my own primary-author work) if
+          I want to feature specific items here again.
+
+        <div class="section">
+          <div class="section-head">
+            <h2>Selected work<span class="accent">.</span></h2>
+            <span class="section-kicker">02 / Publications</span>
+          </div>
+          <div class="featured">
+            <a class="feat" href="https://openreview.net/forum?id=jzkpwcj200" target="_blank" rel="noopener">
+              <span class="badge neurips">NeurIPS 2024</span>
+              <span class="feat-title">Efficient Multiprompt Evaluation of LLMs</span>
+              <span class="feat-arrow">↗</span>
+            </a>
+            <a class="feat" href="https://openreview.net/forum?id=Zb0ajZ7vAt" target="_blank" rel="noopener">
+              <span class="badge colm">COLM 2024</span>
+              <span class="feat-title">LLM Routing with Benchmark Datasets</span>
+              <span class="feat-arrow">↗</span>
+            </a>
+            <a class="feat" href="https://humans-algs-society.github.io/papers/" target="_blank" rel="noopener">
+              <span class="badge workshop">ICML 2024 · WS</span>
+              <span class="feat-title">Bridging the Gap Between AI Developers and Social Practitioners <span class="feat-note">(Workshop)</span></span>
+              <span class="feat-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-head">
+            <h2>Open-source<span class="accent">.</span></h2>
+            <span class="section-kicker"></span>
+          </div>
+          <div class="project">
+            <div class="proj-head">
+              <a class="proj-name" href="https://github.com/IBM/ibm-generative-ai" target="_blank" rel="noopener">ibm-generative-ai</a>
+              <span class="proj-tag lang">python</span>
+              <span class="proj-tag award">★ award-winning</span>
+            </div>
+            <p class="proj-desc">
+              Python SDK for IBM's large language model REST interface — seamless integration of generative AI in Python programs. Initial author and maintainer through v0.2.6. Open-sourced and recognized internally at IBM.
+            </p>
+            <a class="proj-link" href="https://github.com/IBM/ibm-generative-ai" target="_blank" rel="noopener">github.com/IBM/ibm-generative-ai →</a>
+          </div>
+        </div>
+        -->
+
+        <!-- ============================================================
+             ✏️ EDIT: RESEARCH INTERESTS chip grid.
+             Each <li><span class="dot"></span>…</li> is one chip.
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>Research interests<span class="accent">.</span></h2>
+            <span class="section-kicker"></span>
+          </div>
+          <div class="prose">
+            <p>
+              On the research side, I work at the intersection of <strong>AI fairness, AI safety, and the social
+                sciences</strong> — questions like how bias enters ML pipelines, how to mitigate it in practice, and how
+              AI systems land in real-world social contexts. On the engineering side, I focus on <strong>large-scale
+                model evaluation, ML reliability and robustness, and applied AI prototyping</strong>.
+            </p>
+          </div>
+          <ul class="interests">
+            <li><span class="dot"></span>Fairness &amp; bias mitigation</li>
+            <li><span class="dot"></span>AI safety &amp; AI for good</li>
+            <li><span class="dot"></span>LLM evaluation at scale</li>
+            <li><span class="dot"></span>Model routing &amp; quality</li>
+            <li><span class="dot"></span>ML reliability &amp; robustness</li>
+            <li><span class="dot"></span>AI ↔ social sciences</li>
+          </ul>
+          <p class="muted" style="margin-top:16px; font-size:13.5px;">If you're working on these or related topics and
+            want to collaborate, please <a href="mailto:mirianfrsilva@gmail.com">reach out</a>.</p>
+        </div>
+
+        <!-- ============================================================
+             ✏️ EDIT: BACKGROUND — resume-style two-column layout.
+             Left = Experience, right = Education & Research.
+             Each entry is <li class="cv-item">…</li>
+               • add class "past" for roles you've left (mutes the bullet)
+               • <span class="cv-now">Now</span> = the green NOW pill
+             Below the grid: Service chip strip + CV footer link.
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>Background<span class="accent">.</span></h2>
+            <span class="section-kicker"></span>
+          </div>
+
+          <div class="cv-grid">
+            <!-- ============= EXPERIENCE ============= -->
+            <div class="cv-col">
+              <h3>Experience <span class="count">5+ yrs</span></h3>
+              <ul class="cv-list">
+
+                <li class="cv-item">
+                  <div class="cv-row">
+                    <span class="cv-role">Staff Data Scientist &amp; AI Engineer<span class="cv-now">Now</span></span>
+                    <span class="cv-date">Apr 2026 →</span>
+                  </div>
+                  <p class="cv-org">Flash Technology <span class="loc">· São Paulo / Remote</span></p>
+                  <p class="cv-note">Production AI for financial applications, working with LLMs, agentic architectures,
+                    evaluation frameworks, applied ML.</p>
+                </li>
+
+                <li class="cv-item">
+                  <div class="cv-row">
+                    <span class="cv-role">Research Fellow · AI Safety &amp; Ethics<span class="cv-now">Now</span></span>
+                    <span class="cv-date">May 2026 →</span>
+                  </div>
+                  <p class="cv-org">BASE Research <span class="loc">· Part-time, Remote</span></p>
+                  <p class="cv-note">Working with <a href="https://www.linkedin.com/in/serena-oduro/" target="_blank"
+                      rel="noopener">Serena Oduro</a> (Data &amp; Society Institute) on assessing the current state of
+                    AI safety evaluation practices and their ability to address safety concerns impacting Black
+                    communities.</p>
+                </li>
+
+                <li class="cv-item">
+                  <div class="cv-row">
+                    <span class="cv-role">AI Safety Research Fellow<span class="cv-now">Now</span></span>
+                    <span class="cv-date">Feb 2026 →</span>
+                  </div>
+                  <p class="cv-org">SPAR Research <span class="loc">· Part-time, Remote</span></p>
+                  <p class="cv-note">Efficient LLM safety benchmarking via Item Response Theory (IRT) &amp; adaptive
+                    item selection. The method achieve up to 95% lower eval cost while preserving ranking accuracy.</p>
+                </li>
+
+                <li class="cv-item past">
+                  <div class="cv-row">
+                    <span class="cv-role">AI Engineer · AI Models Team</span>
+                    <span class="cv-date">Oct 2021 — Jan 2026</span>
+                  </div>
+                  <p class="cv-org">IBM Research <span class="loc">· Brasil / Worldwide</span></p>
+                  <p class="cv-note">Led innovation initiatives on the proprietary Granite foundation
+                    models, such as, model quality, evaluation pipelines, and enterprise adoption. Close
+                    collaboration with the MIT-IBM Watson AI Lab on LLM evaluation, validation,
+                    prompt engineering, and exploratory science research.
+                  </p>
+                </li>
+
+              </ul>
+            </div>
+
+            <!-- ============= EDUCATION ============= -->
+            <div class="cv-col">
+              <h3>Education &amp; Research <span class="count">3</span></h3>
+              <ul class="cv-list">
+
+                <li class="cv-item past">
+                  <div class="cv-row">
+                    <span class="cv-role">MSc · Computer Science</span>
+                    <span class="cv-date">2022 — 2024</span>
+                  </div>
+                  <p class="cv-org">UFMG · Federal University of Minas Gerais</p>
+                  <p class="cv-note">Thesis on ML fairness in practice, a framework for designing bias-mitigation
+                    interventions. Advised by Ana Paula Couto, Marisa Vasconcelos, Mariano Beiró.</p>
+                </li>
+
+                <li class="cv-item past">
+                  <div class="cv-row">
+                    <span class="cv-role">Visiting Scholar &amp; Research Fellow</span>
+                    <span class="cv-date">2022 — 2023</span>
+                  </div>
+                  <p class="cv-org">UC Berkeley · BEAAMO / BAIR</p>
+                  <p class="cv-note">Auditing algorithmic &amp; evidentiary statistical software used in criminal legal
+                    systems. Advised by Prof. <a href="https://www.redietabebe.com/" target="_blank"
+                      rel="noopener">Rediet Abebe</a>.</p>
+                </li>
+
+                <li class="cv-item past">
+                  <div class="cv-row">
+                    <span class="cv-role">B.Sc · Computational Mathematics</span>
+                    <span class="cv-date">2013 — 2019</span>
+                  </div>
+                  <p class="cv-org">UFMG · Federal University of Minas Gerais</p>
+                  <p class="cv-note">CS + applied mathematics. Undergrad researcher on Hidden Markov Models for speech
+                    recognition &amp; genome sequence analysis.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ============= SERVICE STRIP ============= -->
+          <div class="service-strip">
+            <h3>Service<br />&amp; community</h3>
+            <ul class="chips">
+              <li class="chip"><span>Black in AI · NeurIPS Workshop Co-Chair</span><span class="chip-date">2020 –
+                  2024</span></li>
+              <li class="chip"><span>Black in NLP · NAACL Core Organizer</span><span class="chip-date">2021</span></li>
+              <li class="chip"><span>Girls Support Girls · Founder</span><span class="chip-date">2018 – 2022</span></li>
+              <li class="chip"><span>LatinX in AI · ICML Volunteer</span><span class="chip-date">2020</span></li>
+              <li class="chip"><span>Women in ML · ICML Volunteer</span><span class="chip-date">2020</span></li>
+            </ul>
+          </div>
+
+          <div class="cv-footer">
+            <span>Curated highlights — full history in the CV.</span>
+            <a href="https://mirianfsilva.github.io/resume.html" target="_blank" rel="noopener">→ Full résumé / CV</a>
+          </div>
+        </div>
+
+        <!-- ============================================================
+             ✏️ EDIT: OFF THE CLOCK — personal facts, colophon.
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>Off the clock<span class="accent">.</span></h2>
+            <span class="section-kicker"></span>
+          </div>
+          <div class="facts">
+            <p>
+              I like to travel, play with the lenses on my phone as if I were actually a photographer <a
+                href="https://vsco.co/minixmirian/gallery" target="_blank" rel="noopener">(see some here)</a>, buy more
+              books than I read, and watch superheroes and horror movies — with a subscription to every stream so I
+              don't miss any TV shows. I don't actively consume YouTube, but I enjoy videos like <a
+                href="https://youtu.be/WUvTyaaNkzM" target="_blank" rel="noopener">3Blue1Brown</a>.
+            </p>
+            <span class="signoff">May the force be with you.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ RESEARCH ============ -->
+      <section class="panel" id="panel-research" role="tabpanel">
+
+        <!-- ============================================================
+             ✏️ EDIT: PREPRINTS — papers under review / not yet peer-reviewed.
+             Each <li> = one paper. Copy-paste a whole <li> block to add more.
+             Badges available: .arxiv (rust-red) and .preprint (amber).
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>Preprints<span class="accent">.</span></h2>
+            <span class="section-kicker">Under review · not yet peer-reviewed</span>
+          </div>
+          <ul class="pubs">
+            <li>
+              <div class="pub-meta">
+                <span class="badge arxiv">arXiv</span>
+                <span class="badge preprint">Preprint</span>
+                <span class="pub-year">2026</span>
+              </div>
+              <div>
+                <p class="pub-title"><a href="https://arxiv.org/abs/2603.18173" target="_blank" rel="noopener">Grafite:
+                    Generative regression analysis framework for issue tracking and evaluation</a></p>
+                <p class="pub-authors">Lee, J. Y., <span class="me">Mírian Silva</span>, Nasr, M., Witherspoon, S.,
+                  Bozzani, E., Demers, V., … Rosenthal, S.</p>
+                <p class="pub-venue">arXiv:2603.18173 [cs.CL] · Open-source project (IBM/grafite)</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://arxiv.org/abs/2603.18173" target="_blank" rel="noopener">arxiv</a>
+                  <a class="pub-link" href="https://github.com/IBM/grafite/" target="_blank" rel="noopener">code
+                    (IBM/grafite)</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ============================================================
+             ✏️ EDIT: PUBLICATIONS — peer-reviewed papers.
+             Badges available: .neurips, .colm, .icml, .workshop.
+             Your name in author lists is wrapped in <span class="me">…</span>.
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>Publications<span class="accent">.</span></h2>
+            <span class="section-kicker">Peer-reviewed</span>
+          </div>
+          <ul class="pubs">
+            <li>
+              <div class="pub-meta">
+                <span class="badge neurips">NeurIPS 2024</span>
+                <span class="pub-year">Dec 2024</span>
+              </div>
+              <div>
+                <p class="pub-title"><a href="https://openreview.net/forum?id=jzkpwcj200" target="_blank"
+                    rel="noopener">Efficient Multiprompt Evaluation of LLMs</a></p>
+                <p class="pub-authors">Polo, F. M., Xu, R., Weber, L., <span class="me">Mírian Silva</span>, Bhardwaj,
+                  O., Choshen, L., … Yurochkin, M.</p>
+                <p class="pub-venue">The Thirty-Eighth Annual Conference on Neural Information Processing Systems</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://openreview.net/forum?id=jzkpwcj200" target="_blank"
+                    rel="noopener">paper</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge colm">COLM 2024</span>
+                <span class="pub-year">Aug 2024</span>
+              </div>
+              <div>
+                <p class="pub-title"><a href="https://openreview.net/forum?id=Zb0ajZ7vAt" target="_blank"
+                    rel="noopener">Large Language Model Routing with Benchmark Datasets</a></p>
+                <p class="pub-authors">Shnitzer, T., Ou, A., <span class="me">Mírian Silva</span>, Soule, K., Sun, Y.,
+                  Solomon, J., … Yurochkin, M.</p>
+                <p class="pub-venue">First Conference on Language Modeling</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://openreview.net/forum?id=Zb0ajZ7vAt" target="_blank"
+                    rel="noopener">paper</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge workshop">NeurIPS WS '23</span>
+                <span class="pub-year">Dec 2023</span>
+              </div>
+              <div>
+                <p class="pub-title"><a href="https://openreview.net/forum?id=k9EfAJhFZc" target="_blank"
+                    rel="noopener">LLM Routing with Benchmark Datasets</a></p>
+                <p class="pub-authors">Shnitzer, T., Ou, A., <span class="me">Mírian Silva</span>, Soule, K., Sun, Y.,
+                  Solomon, J., … Yurochkin, M.</p>
+                <p class="pub-venue">NeurIPS 2023 Workshop on Distribution Shifts: New Frontiers with Foundation Models
+                  · <em>Oral presentation</em></p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://openreview.net/forum?id=k9EfAJhFZc" target="_blank"
+                    rel="noopener">paper</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ============================================================
+             ✏️ EDIT: MASTER'S THESIS entry.
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>Master's thesis<span class="accent">.</span></h2>
+            <span class="section-kicker">UFMG · 2024</span>
+          </div>
+          <ul class="pubs">
+            <li>
+              <div class="pub-meta">
+                <span class="badge thesis">Thesis</span>
+                <span class="pub-year">2024</span>
+              </div>
+              <div>
+                <p class="pub-title"><a href="http://hdl.handle.net/1843/78989" target="_blank" rel="noopener">A study
+                    of the nuances of AI fairness development in practice: a framework for designing bias-mitigation
+                    interventions</a></p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span></p>
+                <p class="pub-venue">Master's Thesis · Federal University of Minas Gerais (UFMG), Belo Horizonte, Brazil
+                </p>
+                <div class="pub-links">
+                  <a class="pub-link" href="http://hdl.handle.net/1843/78989" target="_blank" rel="noopener">full
+                    text</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ============================================================
+             ✏️ EDIT: POSTER PRESENTATIONS — workshop posters.
+             ============================================================ -->
+        <div class="section">
+          <div class="section-head">
+            <h2>Poster presentations<span class="accent">.</span></h2>
+            <span class="section-kicker">Workshops</span>
+          </div>
+          <ul class="pubs">
+            <li>
+              <div class="pub-meta">
+                <span class="badge workshop">ICML 2024 · WS</span>
+                <span class="pub-year">Jul 2024</span>
+              </div>
+              <div>
+                <p class="pub-title"><a href="https://humans-algs-society.github.io/papers/" target="_blank"
+                    rel="noopener">Bridging the Gap Between AI Developers and Social Practitioners: a fairness framework
+                    for designing AI systems</a></p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span>, Beiró, M. G., Vasconcelos, M., &amp; Couto,
+                  A. P.</p>
+                <p class="pub-venue">ICML 2024 Workshop on Humans, Algorithmic Decision-Making, Society · Poster
+                  presentation (non-proceeding)</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://humans-algs-society.github.io/papers/" target="_blank"
+                    rel="noopener">workshop</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge workshop">NeurIPS WS '19</span>
+                <span class="pub-year">Dec 2019</span>
+              </div>
+              <div>
+                <p class="pub-title"><a href="https://www.blackinai.org/events" target="_blank"
+                    rel="noopener">Biological Sequence Analysis using Profile Hidden Markov Models</a></p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span></p>
+                <p class="pub-venue">NeurIPS 2019 Black in AI (BAI) Affinity Workshop · Poster presentation</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://www.blackinai.org/events" target="_blank" rel="noopener">event</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ TALKS ============
+           ✏️ EDIT: Talks & panels. Each <li> = one talk.
+           Badges available: .talk (use "Talk" or "Panel" as the label).
+           ============================================================ -->
+      <section class="panel" id="panel-talks" role="tabpanel">
+        <div class="section">
+          <ul class="pubs">
+            <li>
+              <div class="pub-meta">
+                <span class="badge talk">Talk</span>
+                <span class="pub-year">2025</span>
+              </div>
+              <div>
+                <p class="pub-title">O modelo certo para a tarefa certa: estratégias de roteamento para LLMs de código
+                  aberto</p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span> &amp; A. Oliveira</p>
+                <p class="pub-venue">Bradesco Inovabra · IBM Research</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://videos.netshow.me/t/SGjGIdyCOis" target="_blank"
+                    rel="noopener">watch</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge talk">Talk</span>
+                <span class="pub-year">2024</span>
+              </div>
+              <div>
+                <p class="pub-title">AI, academia, and industry: bridging the gap between theory and practice</p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span></p>
+                <p class="pub-venue">Women in Data Science (WiDS) Conference · Guayaquil @ ESPOL, Ecuador</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://www.youtube.com/live/LNZ4DhiABYM?si=zctb8ohjQo5IQCZ7&t=1300"
+                    target="_blank" rel="noopener">watch</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge talk">Talk</span>
+                <span class="pub-year">2021</span>
+              </div>
+              <div>
+                <p class="pub-title">AI, ML &amp; Deep Learning: what's the difference, and how is algorithmic bias
+                  generated?</p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span></p>
+                <p class="pub-venue">PrograMaria Encontros · powered by Avanade</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://www.youtube.com/live/7vUX8FsjmAE?si=QsZkweZ2ZReMRkxZ&t=1459"
+                    target="_blank" rel="noopener">watch</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge talk">Talk</span>
+                <span class="pub-year">2021</span>
+              </div>
+              <div>
+                <p class="pub-title">Data-centric AI and feature stores: data-centric development for performance,
+                  quality &amp; selection</p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span> &amp; L. Amom</p>
+                <p class="pub-venue">Serasa Experian DataLab</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://www.youtube.com/live/qoF4yE2Vy9s?si=78Ebiu4hfhZHqwLZ"
+                    target="_blank" rel="noopener">watch</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge talk">Panel</span>
+                <span class="pub-year">2021</span>
+              </div>
+              <div>
+                <p class="pub-title">MLadies: Women in Machine Learning</p>
+                <p class="pub-authors">Sampaio, A. L., Sena, J., Fortunato, M., <span class="me">Mírian Silva</span>,
+                  &amp; Avila, S.</p>
+                <p class="pub-venue">Data ICMC · University of São Paulo (USP)</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://www.icmc.usp.br/eventos/5555-mladies-mulheres-em-machine-learning"
+                    target="_blank" rel="noopener">event</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="pub-meta">
+                <span class="badge talk">Panel</span>
+                <span class="pub-year">2019</span>
+              </div>
+              <div>
+                <p class="pub-title">Fairness in Algorithms: the importance of diversity and social impact</p>
+                <p class="pub-authors"><span class="me">Mírian Silva</span>, Camelo, T., &amp; Rosselis, I.</p>
+                <p class="pub-venue">She's Tech Conference</p>
+                <div class="pub-links">
+                  <a class="pub-link" href="https://conference2019.shestech.org/events/7plN5zF1MS1ApwzbULPR"
+                    target="_blank" rel="noopener">event</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </div>
+
+  <!-- ✏️ EDIT: Page footer (copyright line). -->
+  <footer class="site-foot">
+    <span>© 2025 Mírian Silva · all rights reserved.</span>
+    <span></span>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const hamburgerButton = document.querySelector('.hamburger-menu');
-      const mobileNavLinks = document.getElementById('mobileNavLinks');
-
-      // Add 'hidden' class on page load if screen is small
-      if (window.innerWidth <= 768) { // Match your CSS breakpoint
-        mobileNavLinks.classList.add('hidden');
-      }
-
-      hamburgerButton.addEventListener('click', function () {
-        mobileNavLinks.classList.toggle('hidden');
-        hamburgerButton.classList.toggle('open');
-      });
-
-      // Optional: Hide menu if screen resizes to desktop
-      window.addEventListener('resize', function () {
-        if (window.innerWidth > 768) {
-          mobileNavLinks.classList.remove('hidden');
-          hamburgerButton.classList.remove('open');
-        } else {
-          // Only add hidden if it's currently visible on mobile and resized
-          // This prevents it from being hidden if the user explicitly opened it and then resized slightly
-          // Better to re-hide if the screen goes to mobile size after desktop
-          if (!mobileNavLinks.classList.contains('hidden')) { // Keep open if user opened it
-            // Or, always hide it if it's a new mobile state:
-            mobileNavLinks.classList.add('hidden');
-          }
-        }
+    // Tab switching
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.panel');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => t.classList.toggle('active', t === tab));
+        panels.forEach(p => p.classList.toggle('active', p.id === 'panel-' + target));
+        // sync URL hash, without scroll-jump
+        history.replaceState(null, '', '#' + target);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
+    // Open from hash on load
+    const initial = (location.hash || '').replace('#', '');
+    if (initial && document.getElementById('panel-' + initial)) {
+      document.querySelector(`.tab[data-tab="${initial}"]`)?.click();
+    }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="js/content.js"></script>
-
-
-  <footer class="site-footer">
-    <p>&copy; 2025 Mírian Silva. All rights reserved.</p>
-  </footer>
 </body>
 
 </html>

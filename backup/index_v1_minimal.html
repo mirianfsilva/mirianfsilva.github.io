@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mírian Silva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --bg-elev: #ffffff;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-muted: #8a8a85;
+    --rule: #e6e2d8;
+    --accent: oklch(0.55 0.14 45);   /* warm terracotta */
+    --accent-soft: oklch(0.95 0.03 45);
+    --maxw: 640px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 96px 28px 48px;
+  }
+
+  /* Header */
+  .header {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: var(--bg-elev);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .avatar .avatar-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "IBM Plex Serif", serif;
+    font-style: italic;
+    font-size: 36px;
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  h1 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+
+  .tagline {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+    text-wrap: pretty;
+  }
+
+  /* Pill links (Scholar / Resume) */
+  .pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 40px;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--bg-elev);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1;
+    transition: border-color .15s ease, transform .15s ease, color .15s ease;
+  }
+
+  .pill:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .pill .arrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    opacity: 0.55;
+    transition: transform .15s ease, opacity .15s ease;
+  }
+
+  .pill:hover .arrow {
+    transform: translate(2px, -2px);
+    opacity: 1;
+  }
+
+  /* Section */
+  .section-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-muted);
+    margin: 0 0 14px;
+  }
+
+  /* Contact list */
+  .contacts {
+    list-style: none;
+    margin: 0 0 56px;
+    padding: 0;
+    display: grid;
+    gap: 2px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .contacts li {
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .contacts a {
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 4px;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 15px;
+    transition: padding .15s ease, color .15s ease;
+  }
+
+  .contacts a:hover {
+    padding-left: 12px;
+    color: var(--accent);
+  }
+
+  .contacts .label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--ink-muted);
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+  }
+
+  .contacts a:hover .label {
+    color: var(--accent);
+  }
+
+  .contacts .handle {
+    font-feature-settings: "ss01";
+    color: var(--ink-soft);
+  }
+
+  .contacts a:hover .handle {
+    color: var(--accent);
+  }
+
+  .contacts .ext {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--ink-muted);
+    opacity: 0;
+    transition: opacity .15s ease, transform .15s ease;
+  }
+
+  .contacts a:hover .ext {
+    opacity: 1;
+    transform: translateX(2px);
+  }
+
+  /* Footer */
+  footer {
+    max-width: var(--maxw);
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 28px 36px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-muted);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  footer .dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+    vertical-align: middle;
+    margin: 0 8px 2px;
+  }
+
+  @media (max-width: 520px) {
+    main { padding: 56px 22px 32px; }
+    .header { grid-template-columns: 72px 1fr; gap: 18px; }
+    .avatar { width: 72px; height: 72px; }
+    h1 { font-size: 26px; }
+    .contacts a { grid-template-columns: 92px 1fr auto; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <div class="avatar">
+        <img
+          src="https://mirianfsilva.github.io/img/avatar.png"
+          alt="Mírian Silva profile picture"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="avatar-fallback" style="display:none">M</div>
+      </div>
+      <div>
+        <h1>Mírian Silva</h1>
+        <p class="tagline">AI Engineer @ IBM Research. MSc in Computer Science @ UFMG, Brasil.</p>
+      </div>
+    </header>
+
+    <div class="pill-row">
+      <a class="pill" href="https://scholar.google.com/citations?user=6vP2segAAAAJ" target="_blank" rel="noopener">
+        Google Scholar
+        <span class="arrow">↗</span>
+      </a>
+      <a class="pill" href="https://mirianfsilva.github.io/resume.html" target="_blank" rel="noopener">
+        Résumé
+        <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <p class="section-label">Elsewhere</p>
+    <ul class="contacts">
+      <li>
+        <a href="/cdn-cgi/l/email-protection#95f8fce7fcf4fbf3e7e6fcf9e3f4d5f2f8f4fcf9bbf6faf8">
+          <span class="label">email</span>
+          <span class="handle"><span class="__cf_email__" data-cfemail="05686c776c646b6377766c697364456268646c692b666a68">[email&#160;protected]</span></span>
+          <span class="ext">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/mirianfsilva" target="_blank" rel="noopener">
+          <span class="label">github</span>
+          <span class="handle">mirianfsilva</span>
+          <span class="ext">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/mirianfsilva/" target="_blank" rel="noopener">
+          <span class="label">linkedin</span>
+          <span class="handle">in/mirianfsilva</span>
+          <span class="ext">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://medium.com/@mirianfsilva" target="_blank" rel="noopener">
+          <span class="label">medium</span>
+          <span class="handle">@mirianfsilva</span>
+          <span class="ext">↗</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/mirianfrsilva" target="_blank" rel="noopener">
+          <span class="label">twitter</span>
+          <span class="handle">@mirianfrsilva</span>
+          <span class="ext">↗</span>
+        </a>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <span>© 2025 Mírian Silva<span class="dot"></span>All rights reserved.</span>
+    <span>Belo Horizonte → ∞</span>
+  </footer>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
