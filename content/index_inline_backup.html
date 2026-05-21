@@ -915,6 +915,20 @@
       color: #8a6820;
     }
 
+    /* When tags appear inside the open-source strip (which is already bg-tint),
+   give .lang a distinct fill so it doesn't blend into the strip background */
+    .os-list .proj-tag.lang {
+      background: var(--bg-elev);
+      color: var(--ink-soft);
+      border: 1px solid var(--rule);
+    }
+
+    [data-theme="dark"] .os-list .proj-tag.lang {
+      background: var(--bg-elev);
+      border-color: var(--rule);
+      color: var(--ink-soft);
+    }
+
     .proj-desc {
       color: var(--ink-soft);
       font-size: 14px;
@@ -1533,7 +1547,7 @@
           <p class="side-label">Elsewhere</p>
           <ul class="social-row">
             <li>
-              <a href="/cdn-cgi/l/email-protection#4924203b2028272f3b3a20253f28092e24282025672a2624" aria-label="Email"
+              <a href="/cdn-cgi/l/email-protection#3f52564d565e51594d4c5653495e7f58525e5653115c5052" aria-label="Email"
                 title="mirianfrsilva@gmail.com">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
                   stroke-linejoin="round">
@@ -1726,7 +1740,7 @@
           </ul>
           <p class="muted" style="margin-top:16px; font-size:13.5px;">If you're working on these or related topics and
             want to collaborate, please <a
-              href="/cdn-cgi/l/email-protection#8fe2e6fde6eee1e9fdfce6e3f9eecfe8e2eee6e3a1ece0e2">reach out</a>.</p>
+              href="/cdn-cgi/l/email-protection#2c41455e454d424a5e5f45405a4d6c4b414d4540024f4341">reach out</a>.</p>
         </div>
 
         <!-- ============================================================
@@ -1855,12 +1869,15 @@
             <ul class="os-list">
               <li>
                 <a class="os-name" href="https://github.com/IBM/grafite/" target="_blank" rel="noopener">grafite</a>
-                <span class="os-desc">IBM Research framework for analyzing LLM regressions across releases.
-                  Co-author.</span>
+                <span class="proj-tag lang">python</span>
+                <span class="proj-tag award">★ co-author</span>
+                <span class="os-desc">IBM Research framework for analyzing LLM regressions across releases.</span>
               </li>
               <li>
                 <a class="os-name" href="https://github.com/IBM/ibm-generative-ai" target="_blank"
                   rel="noopener">ibm-generative-ai</a>
+                <span class="proj-tag lang">python</span>
+                <span class="proj-tag award">★ award-winning</span>
                 <span class="os-desc">Python SDK for IBM's foundation-model API. Initial author &amp; maintainer (≤
                   v0.2.6).</span>
               </li>

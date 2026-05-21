@@ -614,6 +614,11 @@ h2 .accent { color: var(--accent); }
 }
 .proj-tag.lang   { background: var(--bg-tint); color: var(--ink-soft); }
 .proj-tag.award  { background: #fdf4dc; color: #8a6820; }
+
+/* When tags appear inside the open-source strip (which is already bg-tint),
+   give .lang a distinct fill so it doesn't blend into the strip background */
+.os-list .proj-tag.lang  { background: var(--bg-elev); color: var(--ink-soft); border: 1px solid var(--rule); }
+[data-theme="dark"] .os-list .proj-tag.lang { background: var(--bg-elev); border-color: var(--rule); color: var(--ink-soft); }
 .proj-desc {
   color: var(--ink-soft);
   font-size: 14px;
