@@ -1,29 +1,80 @@
-## Research Papers Collaborations & Publications
+## Preprints
+kicker: Under review · not yet peer-reviewed
 
-- Polo, F. M., Xu, R., Weber, L., **Mírian Silva**, Bhardwaj, O., Choshen, L., . . . Yurochkin, M. (2024, December). Efficient multiprompt evaluation of LLMs. In The thirty-eighth annual conference on neural information processing systems (NeurIPS 2024). Retrieved from https://openreview.net/forum?id=jzkpwcj200
-- Shnitzer, T., Ou, A., **Mírian Silva**, Soule, K., Sun, Y., Solomon, J., . . . Yurochkin, M. (2024). Large language model routing
-with benchmark datasets. In First conference on language modeling (COLM 2024). Retrieved from https://openreview.net/forum?id=Zb0ajZ7vAt
-- Shnitzer, T., Ou, A., **Mírian Silva**, Soule, K., Sun, Y., Solomon, J., . . . Yurochkin, M. (2023, December). LLM routing with
-benchmark datasets. In Neurips 2023 workshop on distribution shifts: New frontiers with foundation models. Oral presentation. Retrieved from https://openreview.net/forum?id=k9EfAJhFZc
+<!-- ### [Efficient Safety Benchmarking via Item Response Theory](https://openreview.net/pdf?id=dR9wnbfVGu)
+badges: arxiv:arXiv | preprint:Preprint
+year: 2026
+authors: Spagliardi, F., **Mírian Silva**, Datta, A., Zhou, A., Bonagiri, V. K., Cruz, D.
+venue: arXiv:2603.18173 [cs.AI]
+link: paper | https://openreview.net/pdf?id=dR9wnbfVGu -->
 
-## Master's Thesis
-- *Mírian Silva*. (2024). A study of the nuances of ai fairness development in practice: A framework for designing bias mitigation interventions (Master's Thesis, Federal University of Minas Gerais (UFMG), Belo Horizonte, Brazil). Available at [http://hdl.handle.net/1843/78989](http://hdl.handle.net/1843/78989).
+### [Grafite: Generative regression analysis framework for issue tracking and evaluation](https://arxiv.org/abs/2603.18173)
+badges: arxiv:arXiv | preprint:Preprint
+year: 2026
+authors: Lee, J. Y., **Mírian Silva**, Nasr, M., Witherspoon, S., Bozzani, E., Demers, V., … Rosenthal, S.
+venue: arXiv:2603.18173 [cs.CL] · Open-source project (IBM/grafite)
+link: arxiv | https://arxiv.org/abs/2603.18173
+link: code (IBM/grafite) | https://github.com/IBM/grafite/
 
-## Research Posters Presentations 
+## Publications
+kicker: Peer-reviewed
 
-- **Mírian Silva**, Beiró, M. G., Vasconcelos, M., & Couto, A. P. (2024). Bridging the gap between AI developers and social practitioners: A fairness framework for designing AI systems, ICML 2024 Workshop on Humans, Algorithmic Decision-Making, Society: Modeling Interactions, and Impact, (Non-Proceeding. Accepted as a poster presentation, based on research from
-my master’s dissertation.) Retrieved from https://humans-algs-society.github.io/papers/
-- **Mírian Silva**. (2019). Biological sequence analysis using profile hidden markov models, NeurIPS 2019 Black in AI (BAI) Affinity Workshop, (Non-Proceeding. Accepted as a poster presentation, based on undergraduate research). Retrieved from https://www.blackinai.org/events
+### [Efficient Multiprompt Evaluation of LLMs](https://openreview.net/forum?id=jzkpwcj200)
+badges: neurips:NeurIPS 2024
+year: Dec 2024
+authors: Polo, F. M., Xu, R., Weber, L., **Mírian Silva**, Bhardwaj, O., Choshen, L., … Yurochkin, M.
+venue: The Thirty-Eighth Annual Conference on Neural Information Processing Systems
+link: paper | https://openreview.net/forum?id=jzkpwcj200
 
-## Oral Presentations & Talks
-- **Mírian Silva**, & Oliveira, A. (2025). O modelo certo para a tarefa certa: Estratégias de roteamento para llms de código aberto. [Online; accessed 10-Jun-2025]. Bradesco Inovabra, IBM Research. Retrieved from https://videos.netshow.me/t/SGjGIdyCOis
+### [Large Language Model Routing with Benchmark Datasets](https://openreview.net/forum?id=Zb0ajZ7vAt)
+badges: colm:COLM 2024
+year: Aug 2024
+authors: Shnitzer, T., Ou, A., **Mírian Silva**, Soule, K., Sun, Y., Solomon, J., … Yurochkin, M.
+venue: First Conference on Language Modeling
+link: paper | https://openreview.net/forum?id=Zb0ajZ7vAt
 
-- **Mírian Silva**. (2024b). Ai, academia, and industry: Bridging the gap between theory and practice. Women in Data Science (WiDS) Conference, Guayaquil @ ESPOL, Ecuador. Retrieved from https://www.youtube.com/live/LNZ4DhiABYM?si=zctb8ohjQo5IQCZ7&t=1300
+### [LLM Routing with Benchmark Datasets](https://openreview.net/forum?id=k9EfAJhFZc)
+badges: workshop:NeurIPS WS '23
+year: Dec 2023
+authors: Shnitzer, T., Ou, A., **Mírian Silva**, Soule, K., Sun, Y., Solomon, J., … Yurochkin, M.
+venue: NeurIPS 2023 Workshop on Distribution Shifts: New Frontiers with Foundation Models · *Oral presentation*
+link: paper | https://openreview.net/forum?id=k9EfAJhFZc
 
-- **Mírian Silva**. (2021). Artificial intelligence, machine learning and deep learning: What is the diﬀerence between these areas and how algorithmic bias is generated? [Online;] PrograMaria Encontros powered by Avanade, Machine Learning: Cases and practices. Retrieved from https://www.youtube.com/live/7vUX8FsjmAE?si=QsZkweZ2ZReMRkxZ&t=1459
 
-- **Mírian Silva**, & Amom, L. (2021). Data centric ai and feature stores: What is the most data-centric development, aiming to correct problems, achieve good performances, focusing on the quality and selection of better data before even building and evaluating a model? [Online; accessed 07-Oct-2021]. Serasa Experian DataLab. Retrieved from https://www.youtube.com/live/qoF4yE2Vy9s?si=78Ebiu4hfhZHqwLZ
+## Master's thesis
+kicker: UFMG · 2024
 
-- Sampaio, A. L., Sena, J., Fortunato, M., **Mírian Silva**, & Avila, S. (2021). Mladies: Women in machine learning. [Online; accessed 09-Nov-2021]. Data ICMC, University of São Paulo (USP). Retrieved from https://www.icmc.usp.br/eventos/5555-mladies-mulheres-em-machine-learning
+### [A study of the nuances of AI fairness development in practice: a framework for designing bias-mitigation interventions](http://hdl.handle.net/1843/78989)
+badges: thesis:Thesis
+year: 2024
+authors: **Mírian Silva**
+venue: Master's Thesis · Federal University of Minas Gerais (UFMG), Belo Horizonte, Brasil
+link: full text | http://hdl.handle.net/1843/78989
 
-- **Mírian Silva**, Camelo, T., & Rosselis, I. (2019). Fairness in algorithms: Importance of diversity and social impact. She's Tech Conference. Retrieved from https://conference2019.shestech.org/events/7plN5zF1MS1ApwzbULPR
+
+## Poster presentations
+kicker: Workshops
+
+### [Efficient Safety Benchmarking via Item Response Theory](https://openreview.net/pdf?id=dR9wnbfVGu)
+badges: workshop:ICML 2026 · WS
+year: Jul 2026
+authors: Spagliardi, F., **Mírian Silva**, Datta, A., Zhou, A., Bonagiri, V. K., Cruz, D.
+venue: ICML 2026 Workshop on Combining Theory and Benchmarks: Towards A Virtuous Cycle to Understand and Guarantee Foundation Model Performance · Poster presentation (non-proceeding)
+link: CTB@ICML 2026 Workshop | https://openreview.net/forum?id=dR9wnbfVGu 
+
+venue: ICML 2026 Trustworthy AI for Good (AI4GOOD) Workshop · Poster presentation (non-proceeding)
+link: AI4GOOD@ICML 2026 Workshop | https://openreview.net/forum?id=VMusUQgIpJ
+
+### [Bridging the Gap Between AI Developers and Social Practitioners: a fairness framework for designing AI systems](https://humans-algs-society.github.io/papers/)
+badges: workshop:ICML 2024 · WS
+year: Jul 2024
+authors: **Mírian Silva**, Beiró, M. G., Vasconcelos, M., & Couto, A. P.
+venue: ICML 2024 Workshop on Humans, Algorithmic Decision-Making, Society · Poster presentation (non-proceeding)
+link: workshop | https://humans-algs-society.github.io/papers/
+
+### [Biological Sequence Analysis using Profile Hidden Markov Models](https://www.blackinai.org/events)
+badges: workshop:NeurIPS WS '19
+year: Dec 2019
+authors: **Mírian Silva**
+venue: NeurIPS 2019 Black in AI (BAI) Affinity Workshop · Poster presentation (non-proceeding)
+link: event | https://www.blackinai.org/events
