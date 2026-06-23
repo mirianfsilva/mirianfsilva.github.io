@@ -1,12 +1,13 @@
 ## Preprints
 kicker: Under review · not yet peer-reviewed
 
-<!-- ### [Efficient Safety Benchmarking via Item Response Theory](https://openreview.net/pdf?id=dR9wnbfVGu)
+### [Efficient Safety Benchmarking via Item Response Theory](https://arxiv.org/abs/2606.20626)
 badges: arxiv:arXiv | preprint:Preprint
 year: 2026
 authors: Spagliardi, F., **Mírian Silva**, Datta, A., Zhou, A., Bonagiri, V. K., Cruz, D.
-venue: arXiv:2603.18173 [cs.AI]
-link: paper | https://openreview.net/pdf?id=dR9wnbfVGu -->
+venue: arXiv:2606.20626 [cs.CY] [cs.AI]
+link: arxiv | https://arxiv.org/abs/2606.20626
+
 
 ### [Grafite: Generative regression analysis framework for issue tracking and evaluation](https://arxiv.org/abs/2603.18173)
 badges: arxiv:arXiv | preprint:Preprint
@@ -55,7 +56,7 @@ link: full text | http://hdl.handle.net/1843/78989
 ## Poster presentations
 kicker: Workshops
 
-### [Efficient Safety Benchmarking via Item Response Theory](https://openreview.net/pdf?id=dR9wnbfVGu)
+### [Efficient Safety Benchmarking via Item Response Theory](https://arxiv.org/abs/2606.20626)
 badges: workshop:ICML 2026 · WS
 year: Jul 2026
 authors: Spagliardi, F., **Mírian Silva**, Datta, A., Zhou, A., Bonagiri, V. K., Cruz, D.
