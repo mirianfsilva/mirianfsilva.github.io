@@ -42,17 +42,6 @@ venue: NeurIPS 2023 Workshop on Distribution Shifts: New Frontiers with Foundati
 link: paper | https://openreview.net/forum?id=k9EfAJhFZc
 
 
-## Master's thesis
-kicker: UFMG · 2024
-
-### [A study of the nuances of AI fairness development in practice: a framework for designing bias-mitigation interventions](http://hdl.handle.net/1843/78989)
-badges: thesis:Thesis
-year: 2024
-authors: **Mírian Silva**
-venue: Master's Thesis · Federal University of Minas Gerais (UFMG), Belo Horizonte, Brasil
-link: full text | http://hdl.handle.net/1843/78989
-
-
 ## Poster presentations
 kicker: Workshops
 
@@ -78,4 +67,14 @@ badges: workshop:NeurIPS WS '19
 year: Dec 2019
 authors: **Mírian Silva**
 venue: NeurIPS 2019 Black in AI (BAI) Affinity Workshop · Poster presentation (non-proceeding)
-link: event | https://www.blackinai.org/events
+link: workshop | https://www.blackinai.org/events
+
+## Master's thesis
+kicker: UFMG · 2024
+
+### [A study of the nuances of AI fairness development in practice: a framework for designing bias-mitigation interventions](http://hdl.handle.net/1843/78989)
+badges: thesis:Thesis
+year: 2024
+authors: **Mírian Silva**
+venue: Master's Thesis · Federal University of Minas Gerais (UFMG), Belo Horizonte, Brasil
+link: full text | http://hdl.handle.net/1843/78989
