@@ -50,10 +50,10 @@ badges: workshop:ICML 2026 · WS
 year: Jul 2026
 authors: Spagliardi, F., **Mírian Silva**, Datta, A., Zhou, A., Bonagiri, V. K., Cruz, D.
 venue: ICML 2026 Workshop on Combining Theory and Benchmarks: Towards A Virtuous Cycle to Understand and Guarantee Foundation Model Performance · Poster presentation (non-proceeding)
-link: CTB@ICML 2026 Workshop | https://openreview.net/forum?id=dR9wnbfVGu 
+link: CTB@ICML 2026 workshop | https://openreview.net/forum?id=dR9wnbfVGu 
 
 venue: ICML 2026 Trustworthy AI for Good (AI4GOOD) Workshop · Poster presentation (non-proceeding)
-link: AI4GOOD@ICML 2026 Workshop | https://openreview.net/forum?id=VMusUQgIpJ
+link: AI4GOOD@ICML 2026 workshop | https://openreview.net/forum?id=VMusUQgIpJ
 
 ### [Bridging the Gap Between AI Developers and Social Practitioners: a fairness framework for designing AI systems](https://humans-algs-society.github.io/papers/)
 badges: workshop:ICML 2024 · WS
