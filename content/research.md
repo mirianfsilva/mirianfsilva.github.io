@@ -1,6 +1,14 @@
 ## Preprints
 kicker: Under review · not yet peer-reviewed
 
+### [Whose Safety? Addressing Anti-Blackness in the Age of AI Safety](https://arxiv.org/abs/2611.25302)
+badges: arxiv:arXiv | preprint:Preprint
+year: 2026
+authors: **Mírian Silva**, Oduro, S.
+venue: arXiv:2611.25302 [cs.CY]
+link: arxiv | https://arxiv.org/abs/2611.25302
+
+
 ### [Efficient Safety Benchmarking via Item Response Theory](https://arxiv.org/abs/2606.20626)
 badges: arxiv:arXiv | preprint:Preprint
 year: 2026
